@@ -90,9 +90,9 @@ function budspencer_help -d 'Show helpfile'
   set -l readme_file_omf "$OMF_PATH/themes/budspencer/functions/budspencer.md"
   set -l readme_file_fisher "$__fish_config_dir/functions/budspencer.md"
   if test -f $readme_file_omf
-    set -l readme_file "$readme_file_omf"
+    set -x readme_file "$readme_file_omf"
   else if test -f $readme_file_fisher
-    set -l readme_file "$readme_file_fisher"
+    set -x readme_file "$readme_file_fisher"
   end
   if set -q PAGER
     if [ -e $readme_file ]
